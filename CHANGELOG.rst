@@ -2,6 +2,11 @@
 Changelog for package fadecandy_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.1 (2023-09-21)
+------------------
+* fix(msgs): depends + cmake
+* Contributors: Rein Appeldoorn
+
 1.0.0 (2023-09-05)
 ------------------
 * refactor to ros2
