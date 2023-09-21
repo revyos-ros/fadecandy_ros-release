@@ -1,0 +1,49 @@
+#!/usr/bin/env python
+
+import rclpy
+from rclpy.node import Node
+from rclpy.qos import qos_profile_system_default
+from fadecandy_msgs.msg import LEDArray, LEDStrip
+from std_msgs.msg import ColorRGBA
+
+COLORS = [ColorRGBA(r=1.0, g=1.0, b=1.0), ColorRGBA(r=1.0), ColorRGBA(g=1.0), ColorRGBA(b=1.0)]
+NUM_LED_STRIPS = 8
+BAR_LENGTH = 3
+NUM_LEDS = 21
+
+class ExampleClient(Node):
+    def __init__(self):
+        super().__init__('fadecandy_client')
+        self.led_array_pub_ = self.create_publisher(LEDArray, 'set_leds', qos_profile_system_default)
+        self.timer = self.create_timer(0.1, self.timer_callback)
+        self.bar_start_ = 0
+        self.color_i_ = 0
+    
+    def timer_callback(self):
+        led_array = LEDArray()
+        
+        for led_strip in range(NUM_LED_STRIPS):
+            led_strip = LEDStrip()
+            led_strip.colors = [ColorRGBA()] * NUM_LEDS
+            for bar_offset in range(BAR_LENGTH):
+                led_strip.colors[(self.bar_start_ + bar_offset) % NUM_LEDS] = COLORS[self.color_i_]
+            led_array.strips.append(led_strip)
+
+        self.led_array_pub_.publish(led_array)
+
+        self.bar_start_ = (self.bar_start_ + 1) % NUM_LEDS
+        if self.bar_start_ == 0:
+            self.color_i_ = (self.color_i_ + 1) % len(COLORS)
+
+
+def main(args=None):
+    rclpy.init(args=args)
+
+    example_client = ExampleClient()
+
+    rclpy.spin(example_client)
+
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
