@@ -3,21 +3,21 @@ project(fadecandy_msgs)
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
-    set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 14)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    add_compile_options(-Wall -Wextra -Wpedantic)
+  add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
 set(DEPENDENCIES
-  rosidl_default_generators
   std_msgs
 )
 
 find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
 foreach(dependency IN ITEMS ${DEPENDENCIES})
-    find_package(${dependency} REQUIRED)
+  find_package(${dependency} REQUIRED)
 endforeach()
 
 set(msg_files
