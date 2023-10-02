@@ -2,6 +2,11 @@
 Changelog for package fadecandy_driver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.2 (2023-10-02)
+------------------
+* fix(drivers): missing build depend on pkg-config
+* Contributors: Rein Appeldoorn
+
 1.0.1 (2023-09-21)
 ------------------
 
