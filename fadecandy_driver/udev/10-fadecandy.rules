@@ -1,2 +1,0 @@
-SUBSYSTEM=="usb|usb_device", ACTION=="add", ATTRS{idVendor}=="1d50", ATTRS{idProduct}=="607a", GROUP="dialout"
-
