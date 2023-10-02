@@ -1,3 +1,28 @@
+## fadecandy_ros (humble) - 1.0.2-1
+
+The packages in the `fadecandy_ros` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble fadecandy_ros` on `Mon, 02 Oct 2023 20:35:54 -0000`
+
+These packages were released:
+- `fadecandy_driver`
+- `fadecandy_msgs`
+
+Version of package(s) in repository `fadecandy_ros`:
+
+- upstream repository: https://github.com/eurogroep/fadecandy_ros.git
+- release repository: https://github.com/eurogroep/fadecandy_ros-release.git
+- rosdistro version: `1.0.1-1`
+- old version: `1.0.1-1`
+- new version: `1.0.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## fadecandy_ros (humble) - 1.0.1-1
 
 The packages in the `fadecandy_ros` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble fadecandy_ros` on `Thu, 21 Sep 2023 11:54:01 -0000`
