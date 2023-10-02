@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>fadecandy_driver</name>
+  <version>1.0.1</version>
+  <description>ROS driver for fadecandy LED controllers</description>
+
+  <maintainer email="reinzor@gmail.com">Rein Appeldoorn</maintainer>
+  <maintainer email="venkatavaradhan93@gmail.com">Venkatavaradhan Vembanoor Lakshmi Narayanan</maintainer>
+
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>diagnostic_updater</depend>
+  <depend>fadecandy_msgs</depend>
+  <depend>libusb-1.0-dev</depend>
+  <depend>rclcpp</depend>
+
+  <test_depend>rclpy</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
