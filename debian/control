@@ -1,0 +1,12 @@
+Source: ros-humble-fadecandy-driver
+Section: misc
+Priority: optional
+Maintainer: Rein Appeldoorn <reinzor@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), libusb-1.0-0-dev, pkg-config, ros-humble-ament-cmake, ros-humble-diagnostic-updater, ros-humble-fadecandy-msgs, ros-humble-rclcpp, ros-humble-rclpy <!nocheck>, ros-humble-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-humble-fadecandy-driver
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libusb-1.0-0-dev, ros-humble-diagnostic-updater, ros-humble-fadecandy-msgs, ros-humble-rclcpp, ros-humble-ros-workspace
+Description: ROS driver for fadecandy LED controllers
